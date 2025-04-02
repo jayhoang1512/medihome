@@ -47,7 +47,7 @@
     }
 
     100% {
-        top: 100vh;
+        top: 160vh;
         left: calc(50% + random() * 100vw - 50vw);
         transform: rotate(calc(45deg * random()));
     }
