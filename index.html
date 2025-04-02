@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MVC - Bác sĩ ơi: Ứng dụng chăm sóc sức khỏe 5 trong 1</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Slick Carousel CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- jQuery  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Slick Carousel JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @font-face {
+        font-family: "Brownhill";
+        src: url("/Medihome/Brownhill\ Script.ttf") format("truetype"); /* Đường dẫn tới tệp font */
+      }
+
+      .custom-font {
+        font-family: "Brownhill", regular;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="falling-leaves">
+      <div style="width: 100%; height: 100%">
+        <div class="app">
+          <div class="style_HeaderContainer block">
+            <div class="style_HeadingContainer IGT">
+              <div class="container flex justify-between">
+                <div class="hidden lg:flex items-center">
+                  <span class="text-white font-bold text-base"
+                    >Hotline đặt khám:
+                  </span>
+                  <button class="btn">
+                    <i class="fa fa-phone" style="font-size: 20px"></i>
+                  </button>
+                  <a
+                    class="font-semibold flex text-white text-base"
+                    href="tel.0769186838"
+                  >
+                    0769186838</a
+                  >
+                </div>
+                <div class="user-wrapper flex items-center">
+                  <div class="text-base flex w-full cursor-pointer">
+                    <span style="color: #ffffff"> Đăng ký /</span>
+                    <span class="ml-1" style="color: #ffffff">Đăng nhập</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="style_MenuContainer fyGCDH">
+              <div class="container flex justify-between items-center">
+                <div class="logo">
+                  <div
+                    style="
+                      display: inline-block;
+                      max-width: 100%;
+                      overflow: hidden;
+                      position: relative;
+                      box-sizing: border-box;
+                      margin: 0px;
+                    "
+                  >
+                    <div
+                      style="
+                        box-sizing: border-box;
+                        display: block;
+                        max-width: 100%;
+                      "
+                    ></div>
+                    <img src="asset/img/Medihome.jpg" />
+                  </div>
+                </div>
+                <div class="wrap-menu flex items-center">
+                  <div class="menu-item">
+                    <span class="menu-name menu-flex popover-menu"
+                      >Đặt khám
+                    </span>
+                  </div>
+                  <a href="/cong-dong" class="menu-item">
+                    <span class="menu-name">Hỏi đáp bác sĩ</span>
+                  </a>
+                  <a href="/ho-so-suc-khoe" class="menu-item">
+                    <span class="menu-name">Hồ sơ sức khỏe</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="main-content">
+              <div class="page-home">
+                <div
+                  class="bg-[#F0F9F4] lg:bg-white flex flex-col-reverse lg:flex-col"
+                >
+                  <div>
+                    <div class="style__BannerContainer exzkie">
+                      <div
+                        class="container container-home flex flex-col text-wrap justify-start pt-[16px] pb-6 lg:pt-20 lg:pb-20"
+                      >
+                        <div class="box-feature">
+                          <h1 class="text-h1">
+                            MVC - Bác sĩ ơi <br />
+
+                            <span class="description-h1"
+                              >Ứng dụng chăm sóc sức khỏe chủ động 247</span
+                            >
+                          </h1>
+                          <div class="grid-cols-3 gap-7 mt-[0px] lg:mt-12 grid">
+                            <a href="/bac-si-tu-van">
+                              <div class="item-feature">
+                                <div class="image">
+                                  <div
+                                    style="
+                                      display: inline-block;
+                                      max-width: 100%;
+                                      overflow: hidden;
+                                      position: relative;
+                                      box-sizing: border-box;
+                                      margin: 0;
+                                    "
+                                  >
+                                    <img
+                                      alt="Icon Bác sĩ tư vấn"
+                                      style="
+                                        max-width: 100%;
+                                        display: block;
+                                        margin: 0;
+                                        border: none;
+                                        padding: 0;
+                                      "
+                                      src="asset/img/hospital-call.png"
+                                    />
+                                  </div>
+                                  <h3 class="title">Bác sĩ tư vấn từ xa</h3>
+                                  <div class="description">
+                                    Khám từ xa với bác sĩ qua video call
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="/bac-si-tu-van">
+                              <div class="item-feature">
+                                <div class="image">
+                                  <div
+                                    style="
+                                      display: inline-block;
+                                      max-width: 100%;
+                                      overflow: hidden;
+                                      position: relative;
+                                      box-sizing: border-box;
+                                      margin: 0;
+                                    "
+                                  >
+                                    <img
+                                      alt="Icon Bác sĩ tư vấn"
+                                      style="
+                                        max-width: 100%;
+                                        display: block;
+                                        margin: 0;
+                                        border: none;
+                                        padding: 0;
+                                      "
+                                      src="asset/img/hospital-stay.png"
+                                    />
+                                  </div>
+                                  <h3 class="title">Khám tại CSYT</h3>
+                                  <div class="description">
+                                    Đặt khám ưu tiên tại bệnh viện, phòng khám
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="/bac-si-tu-van">
+                              <div class="item-feature">
+                                <div class="image">
+                                  <div
+                                    style="
+                                      display: inline-block;
+                                      max-width: 100%;
+                                      overflow: hidden;
+                                      position: relative;
+                                      box-sizing: border-box;
+                                      margin: 0;
+                                    "
+                                  >
+                                    <img
+                                      alt="Icon Bác sĩ tư vấn"
+                                      style="
+                                        max-width: 100%;
+                                        display: block;
+                                        margin: 0;
+                                        border: none;
+                                        padding: 0;
+                                      "
+                                      src="asset/img/hospital-message.png"
+                                    />
+                                  </div>
+                                  <h3 class="title">Hỏi đáp bác sĩ</h3>
+                                  <div class="description">
+                                    Chat ẩn danh với bác sĩ chuyên khoa
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="/bac-si-tu-van">
+                              <div class="item-feature">
+                                <div class="image">
+                                  <div
+                                    style="
+                                      display: inline-block;
+                                      max-width: 100%;
+                                      overflow: hidden;
+                                      position: relative;
+                                      box-sizing: border-box;
+                                      margin: 0;
+                                    "
+                                  >
+                                    <img
+                                      alt="Icon Bác sĩ tư vấn"
+                                      style="
+                                        max-width: 100%;
+                                        display: block;
+                                        margin: 0;
+                                        border: none;
+                                        padding: 0;
+                                      "
+                                      src="asset/img/hospital-record.png"
+                                    />
+                                  </div>
+                                  <h3 class="title">Hồ sơ sức khỏe</h3>
+                                  <div class="description">
+                                    Xem và lưu trữ kết quả khám
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <a href="/bac-si-tu-van">
+                              <div class="item-feature">
+                                <div class="image">
+                                  <div
+                                    style="
+                                      display: inline-block;
+                                      max-width: 100%;
+                                      overflow: hidden;
+                                      position: relative;
+                                      box-sizing: border-box;
+                                      margin: 0;
+                                    "
+                                  >
+                                    <img
+                                      alt="Icon Bác sĩ tư vấn"
+                                      style="
+                                        max-width: 100%;
+                                        display: block;
+                                        margin: 0;
+                                        border: none;
+                                        padding: 0;
+                                      "
+                                      src="asset/img/hospital-shopping.png"
+                                    />
+                                  </div>
+                                  <h3 class="title">Shopping</h3>
+                                  <div class="description">
+                                    Mua sắm và đặt ship hỏa tốc
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <div class="w-max">
+                              <div>
+                                <div
+                                  style="
+                                    display: inline-block;
+                                    max-width: 100%;
+                                    overflow: hidden;
+                                    position: relative;
+                                    box-sizing: border-box;
+                                    margin: 0px;
+                                  "
+                                >
+                                  <div
+                                    style="
+                                      box-sizing: border-box;
+                                      display: block;
+                                      max-width: 100%;
+                                    "
+                                  ></div>
+                                  <h3
+                                    class="custom-font"
+                                    style="
+                                      font-size: 35px;
+                                      color: #2e5077;
+                                      font-weight: 100;
+                                    "
+                                  >
+                                    Download app ngay!
+                                  </h3>
+                                </div>
+                                <div class="flex items-center">
+                                  <div class="grid">
+                                    <a class="gg-play" href="">
+                                      <div
+                                        style="
+                                          display: inline-block;
+                                          max-width: 100%;
+                                          overflow: hidden;
+                                          position: relative;
+                                          box-sizing: border-box;
+                                          margin: 0px;
+                                        "
+                                      >
+                                        <div
+                                          style="
+                                            box-sizing: border-box;
+                                            display: block;
+                                            max-width: 100%;
+                                          "
+                                        >
+                                          <img
+                                            alt=""
+                                            aria-hidden="true"
+                                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI2IiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="
+                                            style="
+                                              max-width: 100%;
+                                              display: block;
+                                              margin: 0px;
+                                              border: none;
+                                              padding: 0px;
+                                            "
+                                          />
+                                        </div>
+                                        <img
+                                          src="asset/img/download-android.png"
+                                          alt=""
+                                          style="
+                                            position: absolute;
+                                            inset: 0px;
+                                            box-sizing: border-box;
+                                            padding: 0px;
+                                            border: none;
+                                            margin: auto;
+                                            display: block;
+                                            width: 0px;
+                                            height: 0px;
+                                            min-width: 100%;
+                                            max-width: 100%;
+                                            min-height: 100%;
+                                            max-height: 100%;
+                                            object-fit: contain;
+                                          "
+                                        />
+                                      </div>
+                                    </a>
+                                    <a class="app-store" href="">
+                                      <div
+                                        style="
+                                          display: inline-block;
+                                          max-width: 100%;
+                                          overflow: hidden;
+                                          position: relative;
+                                          box-sizing: border-box;
+                                          margin: 0px;
+                                        "
+                                      >
+                                        <div
+                                          style="
+                                            box-sizing: border-box;
+                                            display: block;
+                                            max-width: 100%;
+                                          "
+                                        >
+                                          <img
+                                            alt=""
+                                            aria-hidden="true"
+                                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI2IiBoZWlnaHQ9IjQwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIvPg=="
+                                            style="
+                                              max-width: 100%;
+                                              display: block;
+                                              margin: 0px;
+                                              border: none;
+                                              padding: 0px;
+                                            "
+                                          />
+                                        </div>
+                                        <img
+                                          src="asset/img/download-ios.png"
+                                          alt=""
+                                          style="
+                                            position: absolute;
+                                            inset: 0px;
+                                            box-sizing: border-box;
+                                            padding: 0px;
+                                            border: none;
+                                            margin: auto;
+                                            display: block;
+                                            width: 0px;
+                                            height: 0px;
+                                            min-width: 100%;
+                                            max-width: 100%;
+                                            min-height: 100%;
+                                            max-height: 100%;
+                                          "
+                                        />
+                                      </div>
+                                    </a>
+                                  </div>
+                                  <div
+                                    style="
+                                      display: inline-block;
+                                      max-width: 100%;
+                                      overflow: hidden;
+                                      position: relative;
+                                      box-sizing: border-box;
+                                      margin: 0px;
+                                    "
+                                  >
+                                    <div
+                                      style="
+                                        box-sizing: border-box;
+                                        display: block;
+                                        max-width: 100%;
+                                      "
+                                    >
+                                      <img
+                                        alt=""
+                                        aria-hidden="true"
+                                        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODYiIGhlaWdodD0iODYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
+                                        style="
+                                          max-width: 100%;
+                                          display: block;
+                                          margin: 0px;
+                                          border: none;
+                                          padding: 0px;
+                                        "
+                                      />
+                                    </div>
+                                    <img
+                                      alt="QR code"
+                                      src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODYiIGhlaWdodD0iODYiIHZpZXdCb3g9IjAgMCA4NiA4NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijg2IiBoZWlnaHQ9Ijg2IiByeD0iNiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTU1LjgzNSA0MS41ODQ5SDU4LjY3NVYzNS44NzQ5SDYxLjUyNVYzMi45OTQ5QzYyLjUwNSAzMi45OTQ5IDYzLjQ0NSAzMi45OTQ5IDY0LjM4NSAzMi45OTQ5TDY0LjM2NSAzMi45NzQ5QzY0LjM3NSAzNC44ODQ5IDY0LjM5NSAzNi44MDQ5IDY0LjQwNSAzOC43MTQ5QzYzLjQ2NSAzOC43MTQ5IDYyLjUyNSAzOC43MTQ5IDYxLjU4NSAzOC43MTQ5VjQ0LjM3NDlINjQuMzk1VjM4LjcwNDlINzIuOTQ1VjQxLjU0NDlINzguNjI1VjQ3LjI2NDlINzUuODA1TDc1LjgyNSA0Ny4yODQ5VjQ0LjM5NDlINzAuMDk1VjQxLjYwNDlINjcuMjk1VjUyLjk0NDlINzUuODI1VjUwLjEyNDlMNzUuODA1IDUwLjE0NDlINzguNjI1VjYxLjUyNDlINzAuMTM1VjU1Ljg5NDlINjcuMjg1VjY0LjM4NDlINzAuMDg1VjY3LjIzNDlINzUuNzc1VjY0LjQ1NDlINzguNjI1VjcwLjA5NDlINzUuODI1VjcyLjk1NDlINzMuMDA1Vjc1LjgxNDlINzguNjM1Vjc4LjYzNDlINTguNzA1Vjc1Ljg1NDlINTUuODY1VjcyLjk5NDlINTMuMDE1VjcwLjE1NDlINTUuNzk1VjY3LjI5NDlINTMuMDE1VjY0LjQwNDlINTAuMTI1TDUwLjE0NSA2NC40MjQ5VjYxLjU0NDlINTIuOTQ1VjU1Ljg2NDlINTAuMTI1QzUwLjEyNSA1NC45MDQ5IDUwLjEyNSA1My45NDQ5IDUwLjEyNSA1Mi45OTQ5SDUyLjk0NVY0Ny4zMDQ5SDUwLjEyNUM1MC4xMjUgNDYuMzQ0OSA1MC4xMzUgNDUuMzk0OSA1MC4xNDUgNDQuNDM0OUw1MC4xMjUgNDQuNDU0OUg1NS44NDVWNDEuNTg0OUw1NS44MjUgNDEuNjA0OUw1NS44MzUgNDEuNTg0OVpNNjQuMzY1IDY0LjM4NDlWNTUuODk0OUg1NS44NzVWNjQuMzg0OUg2NC4zNjVaTTY0LjM2NSA3NS44MDQ5VjY3LjMxNDlINjEuNTg1Vjc1LjgwNDlINjQuMzY1Wk02NC4zNjUgNTAuMTE0OVY0Ny4zMzQ5SDU4LjcyNVY1MC4xMTQ5SDY0LjM2NVpNNjcuMzA1IDcwLjE0NDlWNzUuNzk0OUg3MC4wNzVWNzAuMTQ0OUg2Ny4zMDVaTTc1Ljc3NSA1OC42ODQ5VjU1Ljg4NDlINzMuMDA1VjU4LjY4NDlINzUuNzc1WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMzMuMDA1OCAxMC4xODVIMzUuODU1OFY3LjM0NDk3SDM4LjY5NThWMTAuMTM1SDQxLjU1NThWNy4zNjQ5N0g0Ny4yNTU4VjEyLjk5NUg1MC4xNDU4QzUwLjE0NTggMTQuMDA1IDUwLjE0NTggMTQuOTQ1IDUwLjE0NTggMTUuODg1QzQ5LjIwNTggMTUuODg1IDQ4LjI2NTggMTUuODg1IDQ3LjMyNTggMTUuODg1VjE4LjY4NUg1MC4xMzU4VjE1Ljg2NUg1NS44MzU4VjMwLjEzNUg1OC42NzU4VjMyLjk3NUg1MC4xMzU4VjM4LjcxNUw1MC4xNTU4IDM4LjY5NUg0Ny4yODU4TDQ3LjMwNTggMzguNzE1VjM1Ljg5NUg0NC40MzU4VjM4LjcxNUw0NC40NTU4IDM4LjY5NUgzOC43MzU4VjQ0LjQyNUwzOC43NTU4IDQ0LjQwNUgzNS45MDU4VjQ3LjIzNUgzMy4wNjU4VjQ0LjQwNUgzMC4xNzU4TDMwLjE5NTggNDQuNDI1VjQxLjU1NUwzMC4xNzU4IDQxLjU3NUgzMy4wMjU4VjM1Ljg4NUgzNS44NTU4VjIxLjYxNUgzOC43MzU4QzM4LjczNTggMjAuNjE1IDM4LjczNTggMTkuNjY1IDM4LjczNTggMTguNzI1QzM5LjY3NTggMTguNzI1IDQwLjYxNTggMTguNzI1IDQxLjYyNTggMTguNzI1VjE1Ljg1NUg0NC40MTU4VjEzLjA1NUgzOC43NTU4VjE4LjczNUgzMy4wNTU4VjIxLjU0NUgzMC4yMTU4VjEzLjA1NUgzMy4wNTU4VjEwLjE2NUwzMy4wMzU4IDEwLjE4NUgzMy4wMDU4Wk01MC4xNDU4IDI3LjMxNUg0Ny4yNjU4VjIxLjYzNUg0MS41ODU4QzQxLjU4NTggMjIuNjA1IDQxLjU4NTggMjMuNTI1IDQxLjU4NTggMjQuNDU1SDM4Ljc2NThWMzAuMTE1SDQxLjU3NThWMjQuNDQ1SDQ0LjQ1NThWMzIuOTc1SDQ3LjMwNThWMzAuMTU1SDUwLjEyNThDNTAuMTI1OCAyOS4xNjUgNTAuMTI1OCAyOC4yMzUgNTAuMTI1OCAyNy4zMDVINTIuOTQ1OFYyMS42NDVINTAuMTM1OFYyNy4zMTVINTAuMTQ1OFpNMzguNzU1OCAzMy4wNDVWMzUuODM1SDQxLjUzNThWMzMuMDQ1SDM4Ljc1NThaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik03LjM3NSA3LjM0NDk3SDI3LjI3NVYyNy4yNTVINy4zNzVWNy4zNDQ5N1pNMTAuMjA1IDI0LjQwNUgyNC40MDVWMTAuMjA1SDEwLjIwNVYyNC40MDVaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik01OC43NDYxIDcuMzQ0OTdINzguNjQ2MVYyNy4yNTVINTguNzQ2MVY3LjM0NDk3Wk02MS41ODYxIDI0LjQwNUg3NS43ODYxVjEwLjIwNUg2MS41ODYxVjI0LjQwNVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTI3LjI2NTUgNzguNjU0OUg3LjM1NTQ3VjU4Ljc0NDlIMjcuMjY1NVY3OC42NTQ5Wk0yNC40MjU1IDYxLjU5NDlIMTAuMjM1NVY3NS43OTQ5SDI0LjQzNTVWNjEuNTk0OUgyNC40MjU1WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMzAuMTU1NSAzMy4wMDQ5QzMwLjE1NTUgMzUuODY0OSAzMC4xNTU1IDM4LjcyNDkgMzAuMTU1NSA0MS41ODQ5TDMwLjE3NTUgNDEuNTY0OUMyOS4yMTU1IDQxLjU2NDkgMjguMjY1NSA0MS41NzQ5IDI3LjMwNTUgNDEuNTg0OUMyNy4zMDU1IDQwLjY0NDkgMjcuMzA1NSAzOS43MDQ5IDI3LjMwNTUgMzguNzY0OUgyNC41MDU1VjQxLjU3NDlIMjcuMzI1NUMyNy4zMjU1IDQyLjUzNDkgMjcuMzE1NSA0My40ODQ5IDI3LjMwNTUgNDQuNDQ0OUwyNy4zMjU1IDQ0LjQyNDlIMjQuNTA1NVY0Ny4yOTQ5SDI3LjMyNTVMMjcuMzA1NSA0Ny4yNzQ5VjUwLjA5NDlIMjEuNjE1NVYzOC43NDQ5SDE4Ljc4NTVWNDQuNDA0OUgxNS45MjU1VjQ3LjI4NDlDMTQuOTQ1NSA0Ny4yODQ5IDE0LjAwNTUgNDcuMjg0OSAxMy4wNjU1IDQ3LjI4NDlMMTMuMDg1NSA0Ny4zMDQ5QzEzLjA3NTUgNDUuMzk0OSAxMy4wNTU1IDQzLjQ3NDkgMTMuMDQ1NSA0MS41NjQ5QzEzLjk4NTUgNDEuNTY0OSAxNC45MjU1IDQxLjU2NDkgMTUuODY1NSA0MS41NjQ5VjM4Ljc2NDlIMTMuMDU1NVY0MS41ODQ5SDEwLjE5NTVWMzguNzI0OUg3LjM1NTQ3VjM1Ljg5NDlIMjEuNTc1NVYzMy4wMTQ5SDI0LjQ2NTVMMjQuNDQ1NSAzMi45OTQ5VjM1LjgxNDlIMjcuMzE1NVYzMi45OTQ5TDI3LjI5NTUgMzMuMDE0OUMyOC4yNTU1IDMzLjAxNDkgMjkuMjA1NSAzMy4wMTQ5IDMwLjE2NTUgMzMuMDE0OUwzMC4xNDU1IDMyLjk5NDlMMzAuMTU1NSAzMy4wMDQ5WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMzUuODc1MSA3NS44MTUxSDMzLjAyNTFWNzguNjQ1MUgzMC4yMDUxVjY3LjI4NTFIMzMuMDI1MVY1OC42OTUxTDMzLjAwNTEgNTguNzE1MUMzMy45NjUxIDU4LjcxNTEgMzQuOTE1MSA1OC43MDUxIDM1Ljg3NTEgNTguNjk1MVY2MS41MTUxSDQxLjU5NTFWNTguNzQ1MUg0NC40MTUxVjY3LjI3NTFMNDQuNDM1MSA2Ny4yNTUxSDQxLjU2NTFMNDEuNTg1MSA2Ny4yNzUxVjY0LjQ1NTFIMzUuODg1MVY3MC4xMTUxSDMzLjA0NTFWNzIuOTQ1MUgzNS44NjUxVjc1LjgzNTFMMzUuODg1MSA3NS44MTUxSDM1Ljg3NTFaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik0zNS44NzU3IDUyLjk5NTFWNTAuMTU1MUgzOC43MjU3VjQ0LjQxNTFMMzguNzA1NyA0NC40MzUxSDQxLjU4NTdWNDEuNTQ1MUg0NC40MjU3VjM4LjcwNTFMNDQuNDA1NyAzOC43MjUxSDQ3LjI3NTdMNDcuMjU1NyAzOC43MDUxVjQxLjU3NTFINTAuMTI1N0w1MC4xMDU3IDQxLjU1NTFWNDQuNDI1MUw1MC4xMjU3IDQ0LjQwNTFINDQuMzg1N1Y0Ny4yODUxSDQxLjU0NTdWNTIuOTY1MUgzNS44NDU3TDM1Ljg2NTcgNTIuOTg1MUwzNS44NzU3IDUyLjk5NTFaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik00Ny4yNzU2IDcyLjk2NDlWNzUuODE0OUg1MC4xMDU2Vjc4LjYzNDlINDEuNTg1NlY3Mi45OTQ5SDM4Ljc2NTZWNjcuMjc0OUMzOS42OTU2IDY3LjI3NDkgNDAuNjM1NiA2Ny4yNzQ5IDQxLjU4NTYgNjcuMjc0OUw0MS41NjU2IDY3LjI1NDlWNzAuMTI0OUg0NC40MzU2TDQ0LjQxNTYgNzAuMTA0OVY3Mi45NzQ5SDQ3LjI4NTZMNDcuMjY1NiA3Mi45NTQ5TDQ3LjI3NTYgNzIuOTY0OVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTUwLjEzNTggNjQuMzk1VjcyLjk1NUM0OS4xNjU4IDcyLjk1NSA0OC4yMjU4IDcyLjk1NSA0Ny4yNzU4IDcyLjk1NUw0Ny4yOTU4IDcyLjk3NVY3MC4xMDVINDQuNDI1OEw0NC40NDU4IDcwLjEyNVY2Ny4yNTVMNDQuNDI1OCA2Ny4yNzVINDcuMzA1OFY2NC40MjVINTAuMTQ1OEw1MC4xMjU4IDY0LjQwNUw1MC4xMzU4IDY0LjM5NVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTEzLjAzNTQgNTAuMTQ1SDE1Ljg4NTRWNTIuOTY1SDIxLjU1NTRWNTUuODA1SDEzLjA0NTRWNTAuMTM1TDEzLjAyNTQgNTAuMTU1TDEzLjAzNTQgNTAuMTQ1WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNNy4zNTU0NyAzMi45NjUxVjMwLjE4NTFIMTguNzE1NVYzMi45NjUxSDcuMzU1NDdaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik03Mi45NzUgMzIuOTk1MUM3MC4xMDUgMzIuOTk1MSA2Ny4yNDUgMzIuOTg1MSA2NC4zNzUgMzIuOTc1MUw2NC4zOTUgMzIuOTk1MUM2NC4zOTUgMzIuMDY1MSA2NC4zOTUgMzEuMTQ1MSA2NC4zOTUgMzAuMTg1MUg3Mi45NjVWMzMuMDE1MUw3Mi45ODUgMzIuOTk1MUg3Mi45NzVaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik0zMy4wMjUxIDU4LjY5NDlIMzAuMjA1MVY1My4wMDQ5SDM1Ljg4NTFMMzUuODY1MSA1Mi45ODQ5QzM1Ljg2NTEgNTMuOTQ0OSAzNS44NzUxIDU0Ljg5NDkgMzUuODg1MSA1NS44NTQ5QzM0Ljk0NTEgNTUuODU0OSAzMy45OTUxIDU1Ljg1NDkgMzMuMDE1MSA1NS44NTQ5VjU4LjcwNDlMMzMuMDM1MSA1OC42ODQ5TDMzLjAyNTEgNTguNjk0OVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTUwLjEzNDggMzguNzI1SDUyLjk3NDhWMzUuOTA1SDU1Ljg0NDhWNDEuNTg1TDU1Ljg2NDggNDEuNTY1SDUwLjE0NDhMNTAuMTY0OCA0MS41ODVWMzguNzE1TDUwLjE0NDggMzguNzM1TDUwLjEzNDggMzguNzI1WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNNzUuODE2IDQ3LjI3NDlDNzUuODE2IDQ4LjIzNDkgNzUuODE2IDQ5LjE5NDkgNzUuODE2IDUwLjE0NDlMNzUuODM2IDUwLjEyNDlINzAuMTY2VjQ3LjI4NDlINzUuODM2TDc1LjgxNiA0Ny4yNjQ5VjQ3LjI3NDlaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik0zMC4xNTQ5IDQ0LjQxNVY0Ny4yNzVDMjkuMTg0OSA0Ny4yNzUgMjguMjQ0OSA0Ny4yNzUgMjcuMjk0OSA0Ny4yNzVMMjcuMzE0OSA0Ny4yOTVWNDQuNDI1TDI3LjI5NDkgNDQuNDQ1SDMwLjE2NDlMMzAuMTQ0OSA0NC40MjVMMzAuMTU0OSA0NC40MTVaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik0xMy4wNDU4IDUwLjEyNDlDMTIuMDg1OCA1MC4xMjQ5IDExLjEzNTggNTAuMTI0OSAxMC4xNzU4IDUwLjEyNDlMMTAuMTk1OCA1MC4xNDQ5VjQ3LjMxNDlDMTEuMTY1OCA0Ny4zMTQ5IDEyLjExNTggNDcuMzE0OSAxMy4wNzU4IDQ3LjMxNDlMMTMuMDU1OCA0Ny4yOTQ5QzEzLjA1NTggNDguMjQ0OSAxMy4wNDU4IDQ5LjE5NDkgMTMuMDM1OCA1MC4xNDQ5TDEzLjA1NTggNTAuMTI0OUgxMy4wNDU4WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMTAuMTc1MiA1MC4xMjVWNTIuOTQ1SDcuMzY1MjNWNTAuMTQ1QzguMzA1MjMgNTAuMTQ1IDkuMjQ1MjMgNTAuMTQ1IDEwLjE4NTIgNTAuMTQ1TDEwLjE2NTIgNTAuMTI1SDEwLjE3NTJaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik0yNC40NzQ2IDU1LjgxNDlWNTMuMDM0OUgyNy4yNjQ2VjU1LjgxNDlIMjQuNDc0NloiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTMzLjAyNTEgMTAuMTY1SDMwLjIwNTFWNy4zNTQ5OEgzMy4wMDUxQzMzLjAwNTEgOC4yOTQ5OCAzMy4wMDUxIDkuMjM0OTggMzMuMDA1MSAxMC4xNzVMMzMuMDI1MSAxMC4xNTVWMTAuMTY1WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNNTMuMDM1MiA3LjM0NDk3SDU1LjgxNTJWMTAuMTI1SDUzLjAzNTJWNy4zNDQ5N1oiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTMyLjk5NTMgMjQuNDk0OVYyNy4yNjQ5SDMwLjE5NTNWMjQuNDk0OUgzMi45OTUzWiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMjQuNDY1MSAzMy4wMTUxVjMwLjE5NTFIMjcuMzA1MUMyNy4zMDUxIDMxLjEzNTEgMjcuMzA1MSAzMi4wNzUxIDI3LjMwNTEgMzMuMDE1MUwyNy4zMjUxIDMyLjk5NTFIMjQuNDU1MUwyNC40NzUxIDMzLjAxNTFIMjQuNDY1MVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTcyLjk2NTEgMzMuMDE0OUM3My45MjUxIDMzLjAxNDkgNzQuODc1MSAzMy4wMTQ5IDc1LjgzNTEgMzMuMDE0OUw3NS44MTUxIDMyLjk5NDlWMzUuODE0OUg3Mi45NzUxQzcyLjk3NTEgMzQuODc0OSA3Mi45NzUxIDMzLjkzNDkgNzIuOTc1MSAzMi45OTQ5TDcyLjk1NTEgMzMuMDE0OUg3Mi45NjUxWiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMzAuMTY2MyAzMy4wMTUxVjMwLjE5NTFIMzIuOTc2M1YzMi45OTUxQzMyLjAzNjMgMzIuOTk1MSAzMS4wOTYyIDMyLjk5NTEgMzAuMTU2MiAzMi45OTUxTDMwLjE3NjMgMzMuMDE1MUgzMC4xNjYzWiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNNzUuODM2MiAzMy4wMTUxVjMwLjE5NTFINzguNjQ2MlYzMi45OTUxQzc3LjcwNjIgMzIuOTk1MSA3Ni43NjYyIDMyLjk5NTEgNzUuODI2MiAzMi45OTUxTDc1Ljg0NjIgMzMuMDE1MUg3NS44MzYyWiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMzUuODU1NSA3NS44MzQ5SDM4LjY3NTVWNzguNjQ1SDM1Ljg3NTVDMzUuODc1NSA3Ny43MDUgMzUuODc1NSA3Ni43NjUgMzUuODc1NSA3NS44MjVMMzUuODU1NSA3NS44NDQ5Vjc1LjgzNDlaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik01MC4xNDU0IDUyLjk5NDlINDcuMjc1NFY0Ny4yNjQ5SDUwLjE0NTRWNTIuOTk0OVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTQ3LjI5NDYgNTIuOTg0OVY1NS44NTQ5SDQ0LjQ3NDZWNTIuOTg0OUg0Ny4yOTQ2WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMzUuODY1MiA1OC43MDVWNTUuODM1SDM4LjY4NTJWNTguNzA1SDM1Ljg2NTJaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik00Ny4yNzU0IDU1LjgzNUg1MC4xNDU0VjU4LjY1NUg0Ny4yNzU0VjU1LjgzNVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTYxLjUxNjMgNjEuNTI0OUg1OC43MzYzVjU4Ljc0NDlINjEuNTE2M1Y2MS41MjQ5WiIgZmlsbD0iIzEzNDM5QSIvPgo8cGF0aCBkPSJNMjEuNTU2NCAyMS41NjVIMTMuMDY2NFYxMy4wNzVIMjEuNTU2NFYyMS41NjVaIiBmaWxsPSIjMTM0MzlBIi8+CjxwYXRoIGQ9Ik03Mi45NDUxIDEzLjA3NVYyMS41NTVINjQuNDU1MVYxMy4wNzVINzIuOTQ1MVoiIGZpbGw9IiMxMzQzOUEiLz4KPHBhdGggZD0iTTEzLjA2NjQgNzIuOTI1MVY2NC40MzUxSDIxLjU1NjRWNzIuOTI1MUgxMy4wNjY0WiIgZmlsbD0iIzEzNDM5QSIvPgo8L3N2Zz4K"
+                                      decoding="async"
+                                      data-nimg="intrinsic"
+                                      style="
+                                        position: absolute;
+                                        inset: 0px;
+                                        box-sizing: border-box;
+                                        padding: 0px;
+                                        border: none;
+                                        margin: auto;
+                                        display: block;
+                                        width: 0px;
+                                        height: 0px;
+                                        min-width: 100%;
+                                        max-width: 100%;
+                                        min-height: 100%;
+                                        max-height: 100%;
+                                      "
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="style__IntroContainer liQPaI">
+            <div class="wrap-title">
+              <h2 class="h2-title">
+                Ưu đãi hấp dẫn chỉ có tại MVC - Bác sĩ ơi
+              </h2>
+              <h2 class="h2-des">được nhiều khách hàng lựa chọn</h2>
+              <div class="styled__SlideContainer-sc-792zw-0 dQaZbn">
+                <div class="styled__WrapImage-sc-792zw-1 bpCnEK">
+                  <div class="react-multi-carousel-list">
+                    <ul class="image-slider">
+                      <li class="active">
+                        <img
+                          src="asset/img/MVC1.png"
+                          alt="Image 1"
+                          style="width: 100%; max-width: 100%"
+                        />
+                      </li>
+                      <li>
+                        <img
+                          src="asset/img/MVC2.png"
+                          alt="Image 2"
+                          style="width: 100%; max-width: 100%"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="styled__IntroContainer jMFxjv">
+            <div class="wrap-title">
+              <h2 class="h2-title">Trải nghiệm khám bệnh hiện đại</h2>
+              <h2 class="h2-des">cùng MVC - Bác sĩ ơi</h2>
+            </div>
+          </div>
+        </div>
+        <div class="search-container">
+          <div class="search-box">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Tìm triệu chứng, chuyên khoa, tên bệnh viện, phòng khám"
+              value=""
+            />
+            <div class="address-box">
+              <div class="search-select">
+                <div
+                  class="ant-select ant-select-single ant-select-show-arrow ant-select-show-search"
+                >
+                  <div class="ant-select-selector">
+                    <span class="ant-select-selection-search"
+                      ><input
+                        type="search"
+                        autocomplete="off"
+                        class="ant-select-selection-search-input"
+                        role="combobox"
+                        aria-haspopup="listbox"
+                        aria-owns="rc_select_0_list"
+                        aria-autocomplete="list"
+                        aria-controls="rc_select_0_list"
+                        aria-activedescendant="rc_select_0_list_0"
+                        value=""
+                        id="rc_select_0"
+                        aria-expanded="false" /></span
+                    ><span class="ant-select-selection-item">Địa điểm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-search mb-hidden">Tìm kiếm<!-- --></div>
+            <div class="btn-search mb-show"></div>
+          </div>
+          <div class="search-keywords-container">
+            <div class="search-keywords-container__title">
+              Tìm kiếm phổ biến:
+            </div>
+            <div class="search-keywords__list">
+              <div class="search-keywords__item-box">
+                <div class="search-keywords__item">Khám Tai Mũi Họng</div>
+              </div>
+              <div class="search-keywords__item-box">
+                <div class="search-keywords__item">Khám sản phụ khoa</div>
+              </div>
+              <div class="search-keywords__item-box">
+                <div class="search-keywords__item">Nội soi tiêu hóa</div>
+              </div>
+              <div class="search-keywords__item-box">
+                <div class="search-keywords__item">Siêu âm 2D</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-3-v2 hospital-wrapper">
+          <div class="section-3-body bg-section3">
+            <div class="container-bottom container">
+              <div class="hot-hospital">
+                <div class="container-hot-hospital col-sm-12 col-lg-8 windown">
+                  <div class="wrapper">
+                    <div class="header">
+                      <h2 class="title">Cơ sở y tế hàng đầu</h2>
+                    </div>
+                    <div class="body">
+                      <div class="hot-hospital__list row">
+                        <div class="image-container col-6">
+                          <img
+                            src="asset/img/MediPLUS.png"
+                            alt="Image"
+                            class="image"
+                          />
+                          <div class="overlay">
+                            <img
+                              src="asset/img/Medi.png"
+                              alt="Logo"
+                              class="logo-csyt"
+                            />
+                            <div class="address">
+                              <p class="detail">
+                                <i class="fas fa-home"></i>
+                                Tầng 1, 208 Nguyễn Hữu Cảnh, P. 22, Q. Bình
+                                Thạnh, TP. Hồ Chí Minh
+                              </p>
+                            </div>
+                          </div>
+                          <div class="title-name">
+                            <h3 class="name">Tổ Hợp Phòng Khám MEDI</h3>
+                          </div>
+                        </div>
+                        <div class="image-container col-6">
+                          <img
+                            src="asset/img/MediPLUS2.jpg"
+                            alt="Image"
+                            class="image"
+                          />
+                          <div class="overlay">
+                            <img
+                              src="asset/img/Medi2.png"
+                              alt="Logo"
+                              class="logo-csyt"
+                            />
+                            <div class="address">
+                              <p class="detail">
+                                <i class="fas fa-home"></i>
+                                Tầng 1, 208 Nguyễn Hữu Cảnh, P. 22, Q. Bình
+                                Thạnh, TP. Hồ Chí Minh
+                              </p>
+                            </div>
+                          </div>
+                          <div class="title-name">
+                            <h3 class="name">
+                              Bệnh viện MEDI - TP Hồ Chí Minh
+                            </h3>
+                          </div>
+                        </div>
+                        <div class="image-container col-6">
+                          <img
+                            src="asset/img/MediPLUS3.png"
+                            alt="Image"
+                            class="image"
+                          />
+                          <div class="overlay">
+                            <img
+                              src="asset/img/Medi3.png"
+                              alt="Logo"
+                              class="logo-csyt"
+                            />
+                            <div class="address">
+                              <p class="detail">
+                                <i class="fas fa-home"></i>
+                                Tầng 1, 208 Nguyễn Hữu Cảnh, P. 22, Q. Bình
+                                Thạnh, TP. Hồ Chí Minh
+                              </p>
+                            </div>
+                          </div>
+                          <div class="title-name">
+                            <h3 class="name">Phòng Khám Chuyên Khoa Sài Gòn</h3>
+                          </div>
+                        </div>
+                        <div class="image-container col-6">
+                          <img
+                            src="asset/img/MediPLUS4.png"
+                            alt="Image"
+                            class="image"
+                          />
+                          <div class="overlay">
+                            <img
+                              src="asset/img/Medi4.png"
+                              alt="Logo"
+                              class="logo-csyt"
+                            />
+                            <div class="address">
+                              <p class="detail">
+                                <i class="fas fa-home"></i>
+                                Tầng 1, 208 Nguyễn Hữu Cảnh, P. 22, Q. Bình
+                                Thạnh, TP. Hồ Chí Minh
+                              </p>
+                            </div>
+                          </div>
+                          <div class="title-name">
+                            <h3 class="name">Hệ Thống Y Tế</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="container-hot-doctor col-sm-12 col-lg-4 hot__doctor-web"
+                >
+                  <div class="wrapper">
+                    <div class="header">
+                      <h2 class="title">Bác sĩ nổi bật</h2>
+                    </div>
+                    <div class="body">
+                      <div class="hot-doctor__list">
+                        <a class="hot-doctor__item" href="">
+                          <div
+                            style="
+                              display: inline-block;
+                              max-width: 100%;
+                              overflow: hidden;
+                              position: relative;
+                              box-sizing: border-box;
+                              margin: 0px;
+                            "
+                            class="img-doctor"
+                          >
+                            <img src="asset/img/Doctor1.png" alt="" />
+                          </div>
+                          <div class="info">
+                            <h3 class="name">Ji Sung</h3>
+                            <div class="position">
+                              <i class="fa-solid fa-graduation-cap"></i>
+                              <p>BS</p>
+                            </div>
+                            <div class="major">
+                              <i class="fa-solid fa-briefcase-medical"></i>
+                              <p class="science">Y Học Gia Đình</p>
+                            </div>
+                            <div class="hospital">
+                              <i class="fa-solid fa-briefcase"></i>
+                              <p>Bác Sĩ Ơi - Phòng Khám O2O</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="hot-doctor__item" href="">
+                          <div
+                            style="
+                              display: inline-block;
+                              max-width: 100%;
+                              overflow: hidden;
+                              position: relative;
+                              box-sizing: border-box;
+                              margin: 0px;
+                            "
+                            class="img-doctor"
+                          >
+                            <img src="asset/img/Doctor2.png" alt="" />
+                          </div>
+                          <div class="info">
+                            <h3 class="name">Park Hyung Sik</h3>
+                            <div class="position">
+                              <i class="fa-solid fa-graduation-cap"></i>
+                              <p>BS</p>
+                            </div>
+                            <div class="major">
+                              <i class="fa-solid fa-briefcase-medical"></i>
+                              <p class="science">Chuyên Khoa Nội Tổng Hợp</p>
+                            </div>
+                            <div class="hospital">
+                              <i class="fa-solid fa-briefcase"></i>
+                              <p>Đại học Y Hà Nội</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="hot-doctor__item" href="">
+                          <div
+                            style="
+                              display: inline-block;
+                              max-width: 100%;
+                              overflow: hidden;
+                              position: relative;
+                              box-sizing: border-box;
+                              margin: 0px;
+                            "
+                            class="img-doctor"
+                          >
+                            <img src="asset/img/Doctor3.png" alt="" />
+                          </div>
+                          <div class="info">
+                            <h3 class="name">Park Shin Hye</h3>
+                            <div class="position">
+                              <i class="fa-solid fa-graduation-cap"></i>
+                              <p>ThsBS</p>
+                            </div>
+                            <div class="major">
+                              <i class="fa-solid fa-briefcase-medical"></i>
+                              <p class="science">
+                                Chuyên khoa Lao và bệnh Phổi
+                              </p>
+                            </div>
+                            <div class="hospital">
+                              <i class="fa-solid fa-briefcase"></i>
+                              <p>Bệnh viện Tràng An</p>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="hot-doctor__item" href="">
+                          <div
+                            style="
+                              display: inline-block;
+                              max-width: 100%;
+                              overflow: hidden;
+                              position: relative;
+                              box-sizing: border-box;
+                              margin: 0px;
+                            "
+                            class="img-doctor"
+                          >
+                            <img src="asset/img/Doctor4.png" alt="" />
+                          </div>
+                          <div class="info">
+                            <h3 class="name">Park Hae Jin</h3>
+                            <div class="position">
+                              <i class="fa-solid fa-graduation-cap"></i>
+                              <p>BS</p>
+                            </div>
+                            <div class="major">
+                              <i class="fa-solid fa-briefcase-medical"></i>
+                              <p class="science">Mắt</p>
+                            </div>
+                            <div class="hospital">
+                              <i class="fa-solid fa-briefcase"></i>
+                              <p>Bệnh viện Mắt Huế</p>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-0 lg:mt-24">
+          <div class="container-product">
+            <div class="product-header">
+              <h2 class="title">Sản phẩm chăm sóc sức khỏe</h2>
+            </div>
+            <div class="title-sub">Chăm sóc sức khỏe và thấu hiểu cơ thể</div>
+            <div class="slick-slider slick-initialized">
+              <div class="slick-list">
+                <a href="" style="width: 100%; display: inline-block">
+                  <div class="box">
+                    <div class="next-image-wrapper product-type-img">
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          flex-direction: column;
+                          overflow: hidden;
+                          position: absolute;
+                          inset: 0px;
+                          box-sizing: border-box;
+                          margin: 0px;
+                        "
+                      >
+                        <img src="/asset/img/mevabe.png" alt="" />
+                      </div>
+                      <h3 class="product-name">Mẹ & Bé</h3>
+                    </div>
+                  </div>
+                </a>
+                <a href="" style="width: 100%; display: inline-block">
+                  <div class="box">
+                    <div class="next-image-wrapper product-type-img">
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          flex-direction: column;
+                          overflow: hidden;
+                          position: absolute;
+                          inset: 0px;
+                          box-sizing: border-box;
+                          margin: 0px;
+                        "
+                      >
+                        <img src="/asset/img/chamsoccanhan.png" alt="" />
+                      </div>
+                      <h3 class="product-name">Chăm sóc cá nhân</h3>
+                    </div>
+                  </div>
+                </a>
+                <a href="" style="width: 100%; display: inline-block">
+                  <div class="box">
+                    <div class="next-image-wrapper product-type-img">
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          flex-direction: column;
+                          overflow: hidden;
+                          position: absolute;
+                          inset: 0px;
+                          box-sizing: border-box;
+                          margin: 0px;
+                        "
+                      >
+                        <img src="/asset/img/vattuyte.png" alt="" />
+                      </div>
+                      <h3 class="product-name">Vật tư y tế</h3>
+                    </div>
+                  </div>
+                </a>
+                <a href="" style="width: 100%; display: inline-block">
+                  <div class="box">
+                    <div class="next-image-wrapper product-type-img">
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          flex-direction: column;
+                          overflow: hidden;
+                          position: absolute;
+                          inset: 0px;
+                          box-sizing: border-box;
+                          margin: 0px;
+                        "
+                      >
+                        <img src="/asset/img/thuockedon.png" alt="" />
+                      </div>
+                      <h3 class="product-name">Thuốc kê đơn</h3>
+                    </div>
+                  </div>
+                </a>
+                <a href="" style="width: 100%; display: inline-block">
+                  <div class="box">
+                    <div class="next-image-wrapper product-type-img">
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          flex-direction: column;
+                          overflow: hidden;
+                          position: absolute;
+                          inset: 0px;
+                          box-sizing: border-box;
+                          margin: 0px;
+                        "
+                      >
+                        <img src="/asset/img/suckhoegioitinh.png" alt="" />
+                      </div>
+                      <h3 class="product-name">Sức khỏe giới tính</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-v2 mt-0 section-review">
+          <div class="style__ReviewContainer">
+            <div class="style__CommentContainer container container-home">
+              <div class="title__comment">
+                <h2>Cảm nhận từ phía khách hàng</h2>
+              </div>
+              <div class="icon" id="comment">
+                <i class="fa-solid fa-quote-left"></i>
+              </div>
+              <div class="comment">
+                <div class="wrap-list-cmt">
+                  <div class="item" id="comment__1">
+                    <div class="item-cmt">
+                      Làm mẹ ai mà chả thương con, nhiều khi thấy con ốm đau đưa
+                      vào bệnh viện mà nhìn cảnh xếp hàng chen chúc, chờ đợi mà
+                      sốt ruột quá. May sao nhờ mấy chị đồng nghiệp giới thiệu
+                      đặt trước lịch khám trên MVC - Bác sĩ ơi nên cũng yên tâm
+                      mỗi lần đưa con đi khám.
+                    </div>
+                  </div>
+                  <div class="item" id="comment__2">
+                    <div class="item-cmt">
+                      Đặt khám trước MVC - Bác sĩ ơi cực kỳ tiện lợi lại còn
+                      nhận được nhiều lợi ích nữa chứ. Khi tới bệnh viện mình
+                      được đi bằng lối ưu tiên, được các bạn nhân viên y tế
+                      hướng dẫn đi khám nhiệt tình. Bên cạnh đó, bệnh viện đã
+                      nắm được triệu chứng và yêu cầu của mình đã note trước đó
+                      nên khám rất thoái mái và nhanh chóng. Nói chung mình rất
+                      ưng dịch vụ của MVC - Bác sĩ ơi.
+                    </div>
+                  </div>
+                  <div class="item" id="comment__3">
+                    <div class="item-cmt">
+                      Nhiều khi thắc mắc mấy vấn đề nhạy cảm mà chả biết hỏi ai,
+                      cũng may nhờ các bác sĩ trên ứng dụng MVC - Bác sĩ ơi BÁC
+                      SĨ ƠI nhiệt tình giải đáp. Mọi người có câu hỏi nào cứ vào
+                      mục HỎI BÁC SĨ trên MVC - Bác sĩ ơi để được giải đáp nhé.
+                      Các bác sĩ ở đây chuyên môn cao mà tận tâm lắm mà còn được
+                      ẩn danh nữa nha.
+                    </div>
+                  </div>
+                  <div class="item" id="comment__4">
+                    <div class="item-cmt">
+                      HỒ SƠ SỨC KHỎE của cả gia đình mình đều lưu lại trên app
+                      Bác sĩ ơi MVC - Bác sĩ ơi nên mỗi lần đi khám không phải
+                      lùng sục đi tìm kiếm khắp nơi trong nhà nữa rồi. Quá tiện
+                      cho những người trí nhớ kém như mình.
+                    </div>
+                  </div>
+                </div>
+                <div
+                  id="demo"
+                  class="slide"
+                  data-bs-ride="carousel"
+                  data-bs-interval="6000"
+                >
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#demo"
+                      data-bs-slide-to="0"
+                      class="active"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#demo"
+                      data-bs-slide-to="1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#demo"
+                      data-bs-slide-to="2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#demo"
+                      data-bs-slide-to="3"
+                    ></button>
+                  </div>
+
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <div class="carousel-container">
+                        <img
+                          src="asset/img/image1.png"
+                          alt="Image 1"
+                          onclick="showInfo('image1')"
+                          id="image__1"
+                        />
+                        <div class="carousel-info">
+                          <h6>Chị Nguyễn Thúy Hiền</h6>
+                          <p>Chuyên viên nhân sự cấp cao</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="carousel-container">
+                        <img
+                          src="asset/img/image2.png"
+                          alt="Image 2"
+                          onclick="showInfo('image2')"
+                          id="image__2"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="carousel-container">
+                        <img
+                          src="asset/img/image3.png"
+                          alt="Image 3"
+                          onclick="showInfo('image3')"
+                          id="image__3"
+                        />
+                      </div>
+                    </div>
+                    <div class="carousel-item">
+                      <div class="carousel-container">
+                        <img
+                          src="asset/img/image4.png"
+                          alt="Image 4"
+                          onclick="showInfo('image4')"
+                          id="image__4"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Left and right controls/icons -->
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#demo"
+                    data-bs-slide="prev"
+                  >
+                    <span class="carousel-control-prev-icon"></span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#demo"
+                    data-bs-slide="next"
+                  >
+                    <span class="carousel-control-next-icon"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let currentIndex = 0;
+      const images = document.querySelectorAll(".image-slider li");
+      const totalImages = images.length;
+
+      function changeImage() {
+        images[currentIndex].classList.remove("active");
+
+        currentIndex = (currentIndex + 1) % totalImages;
+
+        images[currentIndex].classList.add("active");
+      }
+
+      setInterval(changeImage, 3000);
+    </script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
