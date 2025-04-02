@@ -20,7 +20,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     animation: fall linear infinite, rotate linear infinite;
-    z-index: 9999;
+    z-index: 9998;
 }
 
 @keyframes rotate {
